@@ -1,0 +1,14 @@
+{
+    "name": "Advanced Tag Descriptions",
+    "uri": "https://github.com/pupi1985/q2a-tag-descriptions",
+    "description": "Allows tag descriptions with images and titles to be displayed",
+    "version": "1.2.2",
+    "date": "2019-02-02",
+    "author": "QA-THemes.com (extended by pupi1985)",
+    "author_uri": "http://qa-themes.com",
+    "license": "GPLv3",
+    "update_uri": "https://raw.githubusercontent.com/pupi1985/q2a-tag-descriptions/master/metadata.json",
+    "min_q2a": "1.7.0",
+    "min_php": "5.1.6",
+    "load_order": "after_db_init"
+}
