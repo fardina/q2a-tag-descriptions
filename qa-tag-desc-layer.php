@@ -35,7 +35,9 @@ class qa_html_theme_layer extends qa_html_theme_base
         $html = new DOMDocument();
         $html->loadHTML(mb_convert_encoding($taghtml, 'HTML-ENTITIES', 'UTF-8'));
 
-        foreach ($html->getElementsByTagName('a') as $a) {
+        $nodeList = $html->getElementsByTagName('a');
+        if ($nodeList->length > 0) {
+            $a = $nodeList->item(0);
             if (!empty($plugin_tag_map[$a->nodeValue]['title'])) {
                 $a->setAttribute('title', $plugin_tag_map[$a->nodeValue]['title']);
             }
@@ -47,9 +49,9 @@ class qa_html_theme_layer extends qa_html_theme_base
                 $element->setAttribute('height', qa_opt('plugin_tag_desc_icon_height'));
                 $a->insertBefore($element, $a->firstChild);
             }
+            $taghtml = $html->saveHTML($a);
         }
 
-        $taghtml = $html->saveHTML();
         qa_html_theme_base::post_tag_item($taghtml, $class);
     }
 
