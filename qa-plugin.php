@@ -1,18 +1,5 @@
 <?php
 
-/*
-	Plugin Name: Advanced Tag Descriptions
-	Plugin URI: https://github.com/Towhidn/q2a-tag-descriptions
-	Plugin Description: Allows tag descriptions with images and titles to be displayed
-	Plugin Version: 1.2.1
-	Plugin Date: 2014-14-1
-	Plugin Author: QA-Themes.com
-	Plugin Author URI: http://qa-themes.com/
-	Plugin License: GPLv2
-	Plugin Minimum Question2Answer Version: 1.5
-	Plugin Update Check URI: https://raw.github.com/Towhidn/q2a-tag-descriptions/master/qa-plugin.php
-*/
-
 if (!defined('QA_VERSION')) { // don't allow this page to be requested directly from browser
     header('Location: ../../');
     exit;
